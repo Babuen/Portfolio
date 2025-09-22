@@ -1,0 +1,203 @@
+/* HERO SECTION */
+.hero {
+  display: flex;
+  flex-direction: column; /* stack content on small screens */
+  align-items: zz;
+  padding: 2rem 5%;
+  width: 50%;
+  min-height: auto; /* lets content decide height */
+  gap: 2rem;
+  margin-top: 10%;
+  justify-content: space-between;
+  flex:1;
+}
+
+/* HERO TEXT */
+.hero-text {
+  text-align: left;
+  color: #fff;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Main Name H1 */
+.hero-text h1 {
+  font-size: clamp(2rem, 5vw, 5rem); /* responsive font size */
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c, #42a5f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+
+.hero-text h1:hover {
+  transform: rotateX(10deg) rotateY(10deg) scale(1.05);
+}
+
+/* Anime text class */
+.hero-text .anime {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: bold;
+  background: linear-gradient(90deg, #f7971e, #ffd200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s ease-in-out infinite;
+  transition: transform 0.4s ease;
+  text-align: left;
+}
+
+/* Secondary name class */
+.hero-text .nam {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: bold;
+  background: linear-gradient(90deg, #00c9ff, #92fe9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s ease-in-out infinite;
+  transition: transform 0.4s ease;
+  text-align: left;
+}
+
+/* About section */
+.about {
+  font-size: 1.2rem;
+  font-weight: 300; /* fixed */
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(76, 201, 240, 0.8);
+}
+
+/* Fade up animation */
+.anime {
+  animation: fadeUp 0.5s ease-in-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow + slide animation */
+@keyframes fadeGlowUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    box-shadow: 0 0 0 rgba(66, 165, 245, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(66, 165, 245, 0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 0 15px rgba(66, 165, 245, 0.5);
+  }
+}
+
+/* Text glow animation */
+@keyframes glow {
+  0% { text-shadow: 0 0 10px rgba(255, 118, 150, 0.6); }
+  50% { text-shadow: 0 0 20px rgba(66, 165, 245, 0.9); }
+  100% { text-shadow: 0 0 10px rgba(255, 118, 150, 0.6); }
+}
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Right alignment helper */
+.right {
+  margin-left: auto; /* flexible alignment instead of hard-coded 40% */
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .hero { width: 70%; }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    width: 90%;
+    padding: 2rem 3%;
+  }
+  .hero-text h1, .hero-text .nam, .hero-text .anime {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    width: 95%;
+    padding: 1.5rem 2%;
+  }
+  .hero-text h1, .hero-text .nam, .hero-text .anime {
+    font-size: clamp(1.5rem, 8vw, 3rem);
+  }
+  .about {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+.hero-right {
+  flex: 1; /* video takes right half */
+  display: flex;
+  justify-content: flex-end; /* push video to right end */
+  align-items: center;
+}
+
+.hero-video {
+  width: 100%;
+  max-width: 400px; /* scales on desktop */
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Responsive for tablets and mobiles */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column; /* stack text + video */
+    align-items: center;
+  }
+  .hero-right {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .hero-video {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-video {
+    max-width: 250px;
+  }
+}

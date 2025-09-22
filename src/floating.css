@@ -1,0 +1,65 @@
+.card-container {
+  width: 60%;
+  height: 60%;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.card {
+  width: 450px;
+  height: 450px;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5, #42e695, #fddb92);
+  background-size: 400% 400%;
+  border-radius: 30px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+.card:hover {
+  transform: rotateY(20deg) rotateX(10deg) scale(1.05);
+}
+
+.social-icon {
+  position: absolute;
+  font-size: 3.5rem;
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  color: #ffeb3b;
+  transform: scale(1.5) translateZ(30px);
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating animations and positions */
+.icon-0 { top: 10%; left: 15%; animation: float1 6s infinite alternate ease-in-out; }
+.icon-1 { top: 30%; left: 70%; animation: float2 7s infinite alternate ease-in-out; }
+.icon-2 { top: 60%; left: 20%; animation: float3 5.5s infinite alternate ease-in-out; }
+.icon-3 { top: 20%; left: 50%; animation: float4 6.5s infinite alternate ease-in-out; }
+.icon-4 { top: 55%; left: 75%; animation: float5 6s infinite alternate ease-in-out; }
+.icon-5 { top: 40%; left: 35%; animation: float6 7s infinite alternate ease-in-out; }
+.icon-6 { top: 5%; left: 60%; animation: float7 5.5s infinite alternate ease-in-out; }
+.icon-7 { top: 70%; left: 45%; animation: float8 6.5s infinite alternate ease-in-out; }
+
+/* Floating animations */
+@keyframes float1 { 0% { transform: translate(0,0); } 50% { transform: translate(5px,-10px); } 100% { transform: translate(0,0); } }
+@keyframes float2 { 0% { transform: translate(0,0); } 50% { transform: translate(-8px,6px); } 100% { transform: translate(0,0); } }
+@keyframes float3 { 0% { transform: translate(0,0); } 50% { transform: translate(10px,-7px); } 100% { transform: translate(0,0); } }
+@keyframes float4 { 0% { transform: translate(0,0); } 50% { transform: translate(-5px,5px); } 100% { transform: translate(0,0); } }
+@keyframes float5 { 0% { transform: translate(0,0); } 50% { transform: translate(7px,-8px); } 100% { transform: translate(0,0); } }
+@keyframes float6 { 0% { transform: translate(0,0); } 50% { transform: translate(-6px,9px); } 100% { transform: translate(0,0); } }
+@keyframes float7 { 0% { transform: translate(0,0); } 50% { transform: translate(8px,-6px); } 100% { transform: translate(0,0); } }
+@keyframes float8 { 0% { transform: translate(0,0); } 50% { transform: translate(-7px,5px); } 100% { transform: translate(0,0); } }

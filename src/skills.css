@@ -1,0 +1,70 @@
+
+
+.skills-section {
+  background-color: transparent;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping to next line */
+  gap: 50px;
+  margin: 0 40px; /* margin left + right */
+  justify-content: center;
+}
+
+.skill-item {
+  width: 90px;
+  height: 100px;
+  background: #1f1f1f;
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* base shadow */
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.05);
+
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  perspective: 1000px; /* for 3D */
+}.skill-item {
+  width: 90px;
+  height: 100px;
+  background: #1f1f1f;
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* faint base shadow */
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  perspective: 1000px;
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.1);
+
+  /* stronger multi-color neon glow */
+  box-shadow:
+    0 0 10px rgba(255, 0, 150, 1),     /* inner pink */
+    0 0 25px rgba(0, 200, 255, 1),     /* cyan */
+    0 0 45px rgba(0, 255, 150, 1),     /* green */
+    0 0 70px rgba(255, 255, 0, 0.9),   /* yellow */
+    0 0 100px rgba(255, 0, 255, 0.8);  /* magenta outer */
+}
+
+.skill-item:hover img {
+  transform: scale(1.1);
+}
