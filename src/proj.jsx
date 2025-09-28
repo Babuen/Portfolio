@@ -34,24 +34,24 @@ export default function Proj() {
 
   const projects = [
     {
-      title: "Ecommerce Admin",
+      title: "The Online Fuel Delivery",
       description:
-        "The admin panel boasts an intuitive dashboard with key metrics like sales trends, customer analytics, and inventory status. Customizable widgets provide at-a-glance insights into the store's performance.",
+        "The Online Fuel Delivery web app provides a seamless platform for users to order fuel anytime, anywhere. It ensures quick, safe, and convenient doorstep delivery with just a few clicks.",
       tags: ["#react", "#mongodb", "#css"],
       image: "./fuel1.png",
     },
     {
       title: "Chat App",
       description:
-        "Our chat application harnesses the capabilities of the MERN to create a seamless communication platform. Users can register, login, create groups, and exchange messages, fostering real-time interactions and collaboration.",
-      tags: ["#react", "#restapi", "#express"],
+        "The Chat App built with React enables real-time messaging with a clean and responsive interface. It offers a smooth user experience for seamless communication across devices.",
+      tags: ["#react", "#firebase", "#javascript"],
       image: "./chat app.png",
     },
     {
-      title: "Cryptocurrency Tracker",
+      title: "Stock trading platform using encrypted Vms",
       description:
-        "Our cryptocurrency tracker application utilizes the MERN stack—MongoDB, Express.js, React.js, and Node.js—to provide real-time information and analysis on various cryptocurrencies. Users can monitor cryptocurrency prices, view historical data, set alerts, and stay updated with market trends.",
-      tags: ["#react", "#restapi", "#express"],
+        "The Stock Trading Platform using encrypted VMs ensures secure and reliable trading by isolating transactions in protected environments. It provides users with fast, encrypted, and risk-free access to stock markets.",
+      tags: ["#react", "#restapi", "#Cloud"],
       image: "./stock.png",
     },
   ];

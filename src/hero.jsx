@@ -23,7 +23,9 @@ function HeroSec() {
         <h1 className="anime">I'm a {words[index]}</h1>
         <p className="about">I develop 3D visuals, user interfaces and web applications</p>
       </div>
-
+  <div className="right">
+    <img src=".\gif.png" alt="" />
+  </div>
    
     </section>
   );
